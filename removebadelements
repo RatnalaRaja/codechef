@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define debugg(x) cout<<#x<<" "<<x<<"\n";
+#define ll long long;
+#define yes cout<<"YES"<<endl;
+#define no cout<<"No"<<endl;
+#define mod = 1e9+7;
+#define cout(a) cout<<a<<"\n";
+#define couts(a) cout<<a<<" ";
+#define fore(i,n) for(long long int i=0;i<n;i++)
+#define foro(i,s,e) for(long long int i=s;i<e;i++)
+
+
+int main(){
+	int test;
+	cin>>test;
+	while(test--){
+		 int a;
+		 cin>>a;
+		 int arr[a];
+		 fore(i,a){
+		 	cin>>arr[i];
+		 }
+		 int c=0;
+		 unordered_map<int,int>mp;
+		 fore(i,a){
+		 	mp[arr[i]]++;
+		 }
+		 vector<int>v;
+		 for(auto i:mp){
+		 	v.push_back(i.second);
+		 }
+		 int k=*max_element(v.begin(),v.end());
+		 
+		 cout<<a-k<<endl;
+
+		
+	}
+	return 0;
+	
+}
