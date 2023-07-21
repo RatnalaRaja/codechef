@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;cin>> t;
+	while(t--){
+	    int n,k,v;
+	    cin>>n>>k>>v;
+	    int arr[n];
+	    int sum=0;
+	    for(int i=0;i<n;i++){
+	        cin>>arr[i];
+	        sum+=arr[i];
+	    }
+	    int arithemetic=v*(n+k);
+	    int differ=arithemetic-sum;
+	    
+	    if(differ/k>0 && differ%k==0)cout<<differ/k<<"\n";
+	    else cout<<-1<<endl;
+	    
+	}
+	return 0;
+}
+//avgnumber
